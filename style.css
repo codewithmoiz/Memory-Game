@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: purple;
+}
+h1{
+    color: #fff;
+}
+
+.container{
+    /* height: 50vh; */
+    width: 40vw; 
+    /* background-color: violet; */
+    /* border: 3px solid #000; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px 5px;
+}
+
+
+/* .selected{
+    border: 2px solid red;
+}
+.match-cards{
+    border: 3px solid springgreen;
+} */
+
+/* 16 boxes in a 60vh height and 50vw width contaner fit all of them boxes in container with perfect height and width*/
+.container .card{
+    height: 8vw;
+    width: 8vw;
+    flex-shrink: 0;
+    background-color: violet;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    /* box-shadow: inset 0px 0px 10px #8b8181; */
+}
+.front-card,
+.back-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background-size: 5vw;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.back-card{
+    background-color: #ccc;
+}
+.back-card,
+.match-cards{
+    transform: rotateY(180deg);
+}
+.selected{
+    transform: rotateY(180deg);
+}
